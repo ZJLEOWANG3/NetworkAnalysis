@@ -10,7 +10,9 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r}
+#https://github.com/stefpeschel/NetCoMi
 setwd("/Users/zijianleowang/Desktop/GitHub/NetworkAnalysis/scripts")
+library(NetCoMi)
 ```
 
 ```{r setup-chunk, include=FALSE}
@@ -21,32 +23,44 @@ knitr::opts_chunk$set(dev = "png",
 ```
 
 ```{r}
-library(NetCoMi)
+
+get.dat <- function(path){
 # load data n x d (samples x OTUs)
-dat <- read.table("../abundance/genus.tsv",sep='\t',header = TRUE,row.names = 1)
+dat <- read.table(path,sep='\t',header = TRUE,row.names = 1)
 dat[is.na(dat)] <- 0
+return (dat)
+}
 
-```
-
-```{r}
 # calculate network
+get.network <- function(dat,pathout,method){
+  if (method=="spearman"){
+    measure="spearman"
+    measurePar=list(na.rm=TRUE)
+  } else if (method=="spring"){
+    measure = "spring" #associations between taxa
+    measurePar = list(nlambda=10,
+                      rep.num=10)
+  } else if (method=="sparcc"){
+    measure = "sparcc" #associations between taxa
+    measurePar = list(iter=20,inner_iter=15)
+  } else if (method=="pearson"){
+    measure = "pearson" #associations between taxa
+    measurePar = list(na.rm=TRUE)
+  }
 net_spring <- netConstruct(dat,
                            filtTax = "highestFreq",
-                           filtTaxPar = list(highestFreq = 50),
+                           filtTaxPar = list(highestFreq = 80),
                            filtSamp = "totalReads",
-                           filtSampPar = list(totalReads = 0.01),# my data is abundance
-                           measure = "spring",
-                           measurePar = list(nlambda=10, 
-                                             rep.num=10),
+                           filtSampPar = list(totalReads = 0.001),# my data is abundance
+                           measure = measure,#associations between taxa 
+                           measurePar = measurePar,
                            normMethod = "none", 
                            zeroMethod = "none",
                            sparsMethod = "none", 
                            dissFunc = "signed",
                            verbose = 2,
                            seed = 123456)
-```
 
-```{r}
 # analyze it
 props_spring <- netAnalyze(net_spring, 
                            centrLCC = TRUE,
@@ -54,8 +68,10 @@ props_spring <- netAnalyze(net_spring,
                            clustMethod = "cluster_fast_greedy",
                            hubPar = "eigenvector",
                            weightDeg = FALSE, normDeg = FALSE)
+
 # plot manually
-png('../output/GCM.cluster.png',width=700,height=600)
+# plot the matrix
+png(paste(pathout,'/GCM.cluster.',method,'.png',sep=""),width=700,height=600)
 plotHeat(mat = props_spring$graphletLCC$gcm1,
          pmat = props_spring$graphletLCC$pAdjust1,
          type = "mixed",
@@ -73,21 +89,23 @@ graphics::rect(xleft   = c( 0.5,  1.5, 4.5,  7.5),
 
 text(6, -0.2, xpd = NA, 
      "Significance codes:  ***: 0.001;  **: 0.01;  *: 0.05")
-```
 
-```{r}
+dev.off()
+
 # summary 
-summary(props_spring, numbNodes = 5L)
-```
+outputfile <- paste(pathout,'/network.summary.',method,'.txt',sep="")
+# sink()
+# print(summary(props_spring, numbNodes = 5L))
+# sink()  # returns output to the console
+dput(summary(props_spring, numbNodes = 5L),file=outputfile,control="all")
 
-```{r network-plot, dev = c("png")}
 # viz the network
-png('../output/network.png',width=700,height=600)
+png(paste(pathout,'/network_',method,'.png',sep=""),width=700,height=600)
 
 p <- plot(props_spring, 
           nodeColor = "cluster", 
           nodeSize = "eigenvector",
-          title1 = "Network on OTU level with SPRING associations", 
+          title1 = paste("Network on OTU level with",method,"  associations"), 
           showTitle = TRUE,
           cexNodes = 6,
           cexTitle = 0.8)
@@ -95,7 +113,35 @@ p <- plot(props_spring,
 legend(0.5, 1.1, cex = 0.8, title = "estimated association:",
        legend = c("+","-"), lty = 1, lwd = 3, col = c("#009900","red"), 
        bty = "n", horiz = TRUE)
+dev.off()
+}
+main <- function(pathin,pathout,method){
+  if (!dir.exists(pathout)){
+  dir.create(pathout,recursive = TRUE)
+}
+dat <- get.dat(pathin)
+get.network(dat,pathout,method)}
+```
 
+```{r}
+
+# Peisheng Data
+pathin = "../data/Peisheng/abundance/genus.tsv"
+pathout = "../output/Peisheng/Soil01"
+main(pathin,pathout,"spearman")
+```
+
+```{r}
+# Dongqi HRSD Data
+pathin = "../data/Dongqi/HRSD/abundance/genus.tsv"
+pathout = "../output/Dongqi/HRSD"
+main(pathin,pathout,"spearman")
+main(pathin,pathout,"sparcc")
+main(pathin,pathout,"pearson")
+```
+
+
+```{r network-plot, dev = c("png")}
 
 ```
 
