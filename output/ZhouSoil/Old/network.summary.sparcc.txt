@@ -1,32 +1,31 @@
 structure(list(glob_probs = structure(list(` ` = c(1, 1, -0.00080000000000000004, 
-48.244900000000001, 1, 0.24773000000000001, 49, 49, 0.70757999999999999, 
+46.857140000000001, 1, 0.24718000000000001, 49, 49, 0.70809, 
 1)), row.names = c("Number of components", "Clustering coefficient", 
 "Modularity", "Positive edge percentage", "Edge density", "Natural connectivity", 
 "Vertex connectivity", "Edge connectivity", "Average dissimilarity*", 
 "Average path length**"), class = "data.frame"), glob_probs_lcc = structure(list(
-    ` ` = c(1, 1, -0.00080000000000000004, 48.244900000000001, 
-    1, 0.24773000000000001, 49, 49, 0.70757999999999999, 1)), row.names = c("Relative LCC size", 
+    ` ` = c(1, 1, -0.00080000000000000004, 46.857140000000001, 
+    1, 0.24718000000000001, 49, 49, 0.70809, 1)), row.names = c("Relative LCC size", 
 "Clustering coefficient", "Modularity", "Positive edge percentage", 
 "Edge density", "Natural connectivity", "Vertex connectivity", 
 "Edge connectivity", "Average dissimilarity*", "Average path length**"
 ), class = "data.frame"), clust = list(structure(c(0, 1, 1, 49
 ), .Dim = c(2L, 2L), .Dimnames = list(c("name:", "   #:"), c("", 
-"")))), hubs = structure(c("Haliangium", "Rhodobacter", "Terrimonas"
-), .Dim = c(3L, 1L), .Dimnames = list(c("", "", ""), "")), central = list(
-    degree1 = structure(list(` ` = c(14.566229999999999, 14.55001, 
-    14.49981, 14.494899999999999, 14.479749999999999)), row.names = c("Rhodobacter", 
-    "Haliangium", "Terrimonas", "Nocardioidaceae_unclassified", 
-    "Tetrasphaera"), class = "data.frame"), between1 = structure(list(
-        ` ` = c(0, 0, 0, 0, 0)), row.names = c("midas_g_2126", 
-    "midas_g_887", "Ca_Competibacter", "Terrimonas", "AAP99"), class = "data.frame"), 
-    close1 = structure(list(` ` = c(1.00797, 1.0078, 1.0057100000000001, 
-    1.0056700000000001, 1.0053399999999999)), row.names = c("Rhodobacter", 
-    "Haliangium", "Terrimonas", "Nocardioidaceae_unclassified", 
-    "Tetrasphaera"), class = "data.frame"), eigenv1 = structure(list(
-        ` ` = c(1, 0.99894000000000005, 0.99556999999999995, 
-        0.99519999999999997, 0.99414999999999998)), row.names = c("Rhodobacter", 
-    "Haliangium", "Terrimonas", "Nocardioidaceae_unclassified", 
-    "Tetrasphaera"), class = "data.frame")), group1 = NULL, group2 = NULL, 
+"")))), hubs = structure(c("MB.A2.108_ge", "Microtrichales_genus", 
+"Steroidobacter"), .Dim = c(3L, 1L), .Dimnames = list(c("", "", 
+""), "")), central = list(degree1 = structure(list(` ` = c(14.48949, 
+14.455550000000001, 14.44014, 14.43563, 14.43108)), row.names = c("MB.A2.108_ge", 
+"Steroidobacter", "Microtrichales_genus", "Bacillales_unclassified", 
+"Sphingomonas"), class = "data.frame"), between1 = structure(list(
+    ` ` = c(0, 0, 0, 0, 0)), row.names = c("Subgroup_6_ge", "Candidatus_Udaeobacter", 
+"RB41", "Xanthobacteraceae_genus", "Gaiellales_genus"), class = "data.frame"), 
+    close1 = structure(list(` ` = c(1.00607, 1.0051099999999999, 
+    1.0049300000000001, 1.00464, 1.00454)), row.names = c("MB.A2.108_ge", 
+    "Steroidobacter", "Bacillales_unclassified", "Dongia", "Microtrichales_genus"
+    ), class = "data.frame"), eigenv1 = structure(list(` ` = c(1, 
+    0.99773999999999996, 0.99656, 0.99639999999999995, 0.996)), row.names = c("MB.A2.108_ge", 
+    "Steroidobacter", "Microtrichales_genus", "Bacillales_unclassified", 
+    "Sphingomonas"), class = "data.frame")), group1 = NULL, group2 = NULL, 
     is_disconnected = FALSE, compSize = structure(c(50, 1), .Dim = 2:1, .Dimnames = list(
         c("size:", "   #:"), "")), clusterLCC = FALSE, paramsProperties = list(
         centrLCC = TRUE, avDissIgnoreInf = FALSE, sPathNorm = TRUE, 

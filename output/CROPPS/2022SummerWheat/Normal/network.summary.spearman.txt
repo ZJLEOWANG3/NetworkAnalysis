@@ -1,0 +1,39 @@
+structure(list(glob_probs = structure(list(` ` = c(1, 0.99841999999999997, 
+-0.01017, 53.066229999999997, 0.99836999999999998, 0.28051999999999999, 
+48, 48, 0.68140000000000001, 0.99997999999999998)), row.names = c("Number of components", 
+"Clustering coefficient", "Modularity", "Positive edge percentage", 
+"Edge density", "Natural connectivity", "Vertex connectivity", 
+"Edge connectivity", "Average dissimilarity*", "Average path length**"
+), class = "data.frame"), glob_probs_lcc = structure(list(` ` = c(1, 
+0.99841999999999997, -0.01017, 53.066229999999997, 0.99836999999999998, 
+0.28051999999999999, 48, 48, 0.68140000000000001, 0.99997999999999998
+)), row.names = c("Relative LCC size", "Clustering coefficient", 
+"Modularity", "Positive edge percentage", "Edge density", "Natural connectivity", 
+"Vertex connectivity", "Edge connectivity", "Average dissimilarity*", 
+"Average path length**"), class = "data.frame"), clust = list(
+    structure(c(1, 24, 2, 26), .Dim = c(2L, 2L), .Dimnames = list(
+        c("name:", "   #:"), c("", "")))), hubs = structure(c("Ellin6055", 
+"Ellin6067", "WD2101_soil_group_ge"), .Dim = c(3L, 1L), .Dimnames = list(
+    c("", "", ""), "")), central = list(degree1 = structure(list(
+    ` ` = c(49, 49, 49, 49, 49)), row.names = c("Vicinamibacterales_genus", 
+"Pseudomonas", "Vicinamibacteraceae_ge", "Delftia", "Sphingomonas"
+), class = "data.frame"), between1 = structure(list(` ` = c(0.00084999999999999995, 
+0.00084999999999999995, 0, 0, 0)), row.names = c("Methylobacterium.Methylorubrum", 
+"Subgroup_17_ge", "Vicinamibacterales_genus", "Pseudomonas", 
+"Vicinamibacteraceae_ge"), class = "data.frame"), close1 = structure(list(
+    ` ` = c(1.20801, 1.19973, 1.1833400000000001, 1.1801699999999999, 
+    1.17747)), row.names = c("Ellin6055", "Luteitalea", "Ellin6067", 
+"Candidatus_Udaeobacter", "WD2101_soil_group_ge"), class = "data.frame"), 
+    eigenv1 = structure(list(` ` = c(1, 0.99424000000000001, 
+    0.9839, 0.98209000000000002, 0.97711000000000003)), row.names = c("Ellin6055", 
+    "Ellin6067", "WD2101_soil_group_ge", "Pirellula", "Luteitalea"
+    ), class = "data.frame")), group1 = NULL, group2 = NULL, 
+    is_disconnected = FALSE, compSize = structure(c(50, 1), .Dim = 2:1, .Dimnames = list(
+        c("size:", "   #:"), "")), clusterLCC = FALSE, paramsProperties = list(
+        centrLCC = TRUE, avDissIgnoreInf = FALSE, sPathNorm = TRUE, 
+        sPathAlgo = "dijkstra", normNatConnect = TRUE, connectivity = TRUE, 
+        clustMethod = "cluster_fast_greedy", clustPar = NULL, 
+        clustPar2 = NULL, weightClustCoef = TRUE, hubPar = "eigenvector", 
+        hubQuant = 0.94999999999999996, lnormFit = FALSE, weightDeg = FALSE, 
+        normDeg = FALSE, normBetw = TRUE, normClose = TRUE, normEigen = TRUE), 
+    twoNets = FALSE, call = NULL), class = "summary.microNetProps")

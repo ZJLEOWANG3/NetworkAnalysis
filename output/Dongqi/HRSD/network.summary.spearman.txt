@@ -1,33 +1,32 @@
-structure(list(glob_probs = structure(list(` ` = c(1, 1, -0.0061399999999999996, 
-57.373420000000003, 1, 0.31791000000000003, 79, 79, 0.65637000000000001, 
+structure(list(glob_probs = structure(list(` ` = c(1, 1, -0.010059999999999999, 
+52.897959999999998, 1, 0.28904999999999997, 49, 49, 0.67073000000000005, 
 1)), row.names = c("Number of components", "Clustering coefficient", 
 "Modularity", "Positive edge percentage", "Edge density", "Natural connectivity", 
 "Vertex connectivity", "Edge connectivity", "Average dissimilarity*", 
 "Average path length**"), class = "data.frame"), glob_probs_lcc = structure(list(
-    ` ` = c(1, 1, -0.0061399999999999996, 57.373420000000003, 
-    1, 0.31791000000000003, 79, 79, 0.65637000000000001, 1)), row.names = c("Relative LCC size", 
+    ` ` = c(1, 1, -0.010059999999999999, 52.897959999999998, 
+    1, 0.28904999999999997, 49, 49, 0.67073000000000005, 1)), row.names = c("Relative LCC size", 
 "Clustering coefficient", "Modularity", "Positive edge percentage", 
 "Edge density", "Natural connectivity", "Vertex connectivity", 
 "Edge connectivity", "Average dissimilarity*", "Average path length**"
-), class = "data.frame"), clust = list(structure(c(1, 47, 2, 
-33), .Dim = c(2L, 2L), .Dimnames = list(c("name:", "   #:"), 
-    c("", "")))), hubs = structure(c("Ahniella", "midas_g_105", 
-"midas_g_894", "Nitrospira"), .Dim = c(4L, 1L), .Dimnames = list(
-    c("", "", "", ""), "")), central = list(degree1 = structure(list(
-    ` ` = c(31.223669999999998, 31.047129999999999, 30.774629999999998, 
-    30.468879999999999, 30.466919999999998)), row.names = c("Ahniella", 
-"Nitrospira", "midas_g_894", "Pajaroellobacter", "midas_g_105"
-), class = "data.frame"), between1 = structure(list(` ` = c(0, 
-0, 0, 0, 0)), row.names = c("midas_g_2126", "midas_g_887", "Ca_Competibacter", 
-"Terrimonas", "AAP99"), class = "data.frame"), close1 = structure(list(
-    ` ` = c(1.2891600000000001, 1.26901, 1.2568600000000001, 
-    1.2197, 1.2005600000000001)), row.names = c("Ahniella", "midas_g_894", 
-"Nitrospira", "midas_g_179", "midas_g_1955"), class = "data.frame"), 
-    eigenv1 = structure(list(` ` = c(1, 0.99463999999999997, 
-    0.98563000000000001, 0.97394999999999998, 0.97191000000000005
-    )), row.names = c("Ahniella", "Nitrospira", "midas_g_894", 
-    "midas_g_105", "Pajaroellobacter"), class = "data.frame")), 
-    group1 = NULL, group2 = NULL, is_disconnected = FALSE, compSize = structure(c(80, 
+), class = "data.frame"), clust = list(structure(c(1, 22, 2, 
+28), .Dim = c(2L, 2L), .Dimnames = list(c("name:", "   #:"), 
+    c("", "")))), hubs = structure(c("midas_g_5535", "midas_g_894", 
+"Nitrospira"), .Dim = c(3L, 1L), .Dimnames = list(c("", "", ""
+), "")), central = list(degree1 = structure(list(` ` = c(17.46659, 
+17.368690000000001, 17.3538, 17.334330000000001, 17.305569999999999
+)), row.names = c("Nitrospira", "Flavobacterium", "Rhodobacter", 
+"midas_g_5535", "midas_g_894"), class = "data.frame"), between1 = structure(list(
+    ` ` = c(0, 0, 0, 0, 0)), row.names = c("midas_g_2126", "midas_g_887", 
+"Ca_Competibacter", "Terrimonas", "AAP99"), class = "data.frame"), 
+    close1 = structure(list(` ` = c(1.2395099999999999, 1.2300899999999999, 
+    1.2167699999999999, 1.20045, 1.1968300000000001)), row.names = c("Flavobacterium", 
+    "Rhodobacter", "midas_g_59", "midas_g_894", "Nitrospira"), class = "data.frame"), 
+    eigenv1 = structure(list(` ` = c(1, 0.98980999999999997, 
+    0.98824999999999996, 0.98470000000000002, 0.98455000000000004
+    )), row.names = c("Nitrospira", "midas_g_894", "midas_g_5535", 
+    "Flavobacterium", "midas_g_179"), class = "data.frame")), 
+    group1 = NULL, group2 = NULL, is_disconnected = FALSE, compSize = structure(c(50, 
     1), .Dim = 2:1, .Dimnames = list(c("size:", "   #:"), "")), 
     clusterLCC = FALSE, paramsProperties = list(centrLCC = TRUE, 
         avDissIgnoreInf = FALSE, sPathNorm = TRUE, sPathAlgo = "dijkstra", 

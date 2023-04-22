@@ -1,0 +1,40 @@
+structure(list(glob_probs = structure(list(` ` = c(1, 0.99505999999999994, 
+-0.01089, 54.634950000000003, 0.99509999999999998, 0.27023999999999998, 
+47, 47, 0.68849000000000005, 0.99990999999999997)), row.names = c("Number of components", 
+"Clustering coefficient", "Modularity", "Positive edge percentage", 
+"Edge density", "Natural connectivity", "Vertex connectivity", 
+"Edge connectivity", "Average dissimilarity*", "Average path length**"
+), class = "data.frame"), glob_probs_lcc = structure(list(` ` = c(1, 
+0.99505999999999994, -0.01089, 54.634950000000003, 0.99509999999999998, 
+0.27023999999999998, 47, 47, 0.68849000000000005, 0.99990999999999997
+)), row.names = c("Relative LCC size", "Clustering coefficient", 
+"Modularity", "Positive edge percentage", "Edge density", "Natural connectivity", 
+"Vertex connectivity", "Edge connectivity", "Average dissimilarity*", 
+"Average path length**"), class = "data.frame"), clust = list(
+    structure(c(1, 25, 2, 14, 3, 11), .Dim = 2:3, .Dimnames = list(
+        c("name:", "   #:"), c("", "", "")))), hubs = structure(c("Polyangiaceae_genus", 
+"WD2101_soil_group_ge", "X67.14_ge"), .Dim = c(3L, 1L), .Dimnames = list(
+    c("", "", ""), "")), central = list(degree1 = structure(list(
+    ` ` = c(49, 49, 49, 49, 49)), row.names = c("Pseudomonas", 
+"Methylobacterium.Methylorubrum", "Vicinamibacteraceae_ge", "Vicinamibacterales_genus", 
+"Halomonas"), class = "data.frame"), between1 = structure(list(
+    ` ` = c(0.0016999999999999999, 0.00084999999999999995, 0.00084999999999999995, 
+    0.00084999999999999995, 0.00084999999999999995)), row.names = c("Polyangiaceae_genus", 
+"Solirubrobacter", "Deinococcus", "Latescibacterota_ge", "OM190_ge"
+), class = "data.frame"), close1 = structure(list(` ` = c(1.13167, 
+1.1180699999999999, 1.1081099999999999, 1.10066, 1.09907)), row.names = c("X67.14_ge", 
+"Polyangiaceae_genus", "WD2101_soil_group_ge", "MND1", "Escherichia.Shigella"
+), class = "data.frame"), eigenv1 = structure(list(` ` = c(1, 
+0.96931, 0.96923000000000004, 0.95469999999999999, 0.94523999999999997
+)), row.names = c("X67.14_ge", "WD2101_soil_group_ge", "Polyangiaceae_genus", 
+"Geminicoccaceae_genus", "CCD24_ge"), class = "data.frame")), 
+    group1 = NULL, group2 = NULL, is_disconnected = FALSE, compSize = structure(c(50, 
+    1), .Dim = 2:1, .Dimnames = list(c("size:", "   #:"), "")), 
+    clusterLCC = FALSE, paramsProperties = list(centrLCC = TRUE, 
+        avDissIgnoreInf = FALSE, sPathNorm = TRUE, sPathAlgo = "dijkstra", 
+        normNatConnect = TRUE, connectivity = TRUE, clustMethod = "cluster_fast_greedy", 
+        clustPar = NULL, clustPar2 = NULL, weightClustCoef = TRUE, 
+        hubPar = "eigenvector", hubQuant = 0.94999999999999996, 
+        lnormFit = FALSE, weightDeg = FALSE, normDeg = FALSE, 
+        normBetw = TRUE, normClose = TRUE, normEigen = TRUE), 
+    twoNets = FALSE, call = NULL), class = "summary.microNetProps")

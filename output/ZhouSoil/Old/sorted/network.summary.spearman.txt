@@ -1,0 +1,41 @@
+structure(list(glob_probs = structure(list(` ` = c(1, 0.99761999999999995, 
+-0.01064, 51.636659999999999, 0.99755000000000005, 0.28051999999999999, 
+48, 48, 0.67976000000000003, 0.99972000000000005)), row.names = c("Number of components", 
+"Clustering coefficient", "Modularity", "Positive edge percentage", 
+"Edge density", "Natural connectivity", "Vertex connectivity", 
+"Edge connectivity", "Average dissimilarity*", "Average path length**"
+), class = "data.frame"), glob_probs_lcc = structure(list(` ` = c(1, 
+0.99761999999999995, -0.01064, 51.636659999999999, 0.99755000000000005, 
+0.28051999999999999, 48, 48, 0.67976000000000003, 0.99972000000000005
+)), row.names = c("Relative LCC size", "Clustering coefficient", 
+"Modularity", "Positive edge percentage", "Edge density", "Natural connectivity", 
+"Vertex connectivity", "Edge connectivity", "Average dissimilarity*", 
+"Average path length**"), class = "data.frame"), clust = list(
+    structure(c(1, 25, 2, 25), .Dim = c(2L, 2L), .Dimnames = list(
+        c("name:", "   #:"), c("", "")))), hubs = structure(c("Armatimonadetes_genus", 
+"Microtrichales_genus", "Subgroup_6_unclassified"), .Dim = c(3L, 
+1L), .Dimnames = list(c("", "", ""), "")), central = list(degree1 = structure(list(
+    ` ` = c(49, 49, 49, 49, 49)), row.names = c("Subgroup_6_ge", 
+"Candidatus_Udaeobacter", "RB41", "Xanthobacteraceae_genus", 
+"Gaiellales_genus"), class = "data.frame"), between1 = structure(list(
+    ` ` = c(0.00084999999999999995, 0.00084999999999999995, 0.00084999999999999995, 
+    0, 0)), row.names = c("Gaiellales_unclassified", "IMCC26256_ge", 
+"Microvirga", "Subgroup_6_ge", "Candidatus_Udaeobacter"), class = "data.frame"), 
+    close1 = structure(list(` ` = c(1.3009200000000001, 1.27108, 
+    1.25509, 1.2502899999999999, 1.23105)), row.names = c("Steroidobacter", 
+    "Solirubrobacter", "Microtrichales_genus", "Subgroup_6_unclassified", 
+    "Armatimonadetes_genus"), class = "data.frame"), eigenv1 = structure(list(
+        ` ` = c(1, 0.98978999999999995, 0.97284000000000004, 
+        0.96943000000000001, 0.96550000000000002)), row.names = c("Microtrichales_genus", 
+    "Armatimonadetes_genus", "Subgroup_6_unclassified", "Steroidobacter", 
+    "Solirubrobacter"), class = "data.frame")), group1 = NULL, 
+    group2 = NULL, is_disconnected = FALSE, compSize = structure(c(50, 
+    1), .Dim = 2:1, .Dimnames = list(c("size:", "   #:"), "")), 
+    clusterLCC = FALSE, paramsProperties = list(centrLCC = TRUE, 
+        avDissIgnoreInf = FALSE, sPathNorm = TRUE, sPathAlgo = "dijkstra", 
+        normNatConnect = TRUE, connectivity = TRUE, clustMethod = "cluster_fast_greedy", 
+        clustPar = NULL, clustPar2 = NULL, weightClustCoef = TRUE, 
+        hubPar = "eigenvector", hubQuant = 0.94999999999999996, 
+        lnormFit = FALSE, weightDeg = FALSE, normDeg = FALSE, 
+        normBetw = TRUE, normClose = TRUE, normEigen = TRUE), 
+    twoNets = FALSE, call = NULL), class = "summary.microNetProps")

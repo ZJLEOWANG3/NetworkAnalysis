@@ -1,0 +1,40 @@
+structure(list(glob_probs = structure(list(` ` = c(1, 0.99919000000000002, 
+-0.01057, 50.98039, 0.99917999999999996, 0.26685999999999999, 
+48, 48, 0.69025999999999998, 0.99997000000000003)), row.names = c("Number of components", 
+"Clustering coefficient", "Modularity", "Positive edge percentage", 
+"Edge density", "Natural connectivity", "Vertex connectivity", 
+"Edge connectivity", "Average dissimilarity*", "Average path length**"
+), class = "data.frame"), glob_probs_lcc = structure(list(` ` = c(1, 
+0.99919000000000002, -0.01057, 50.98039, 0.99917999999999996, 
+0.26685999999999999, 48, 48, 0.69025999999999998, 0.99997000000000003
+)), row.names = c("Relative LCC size", "Clustering coefficient", 
+"Modularity", "Positive edge percentage", "Edge density", "Natural connectivity", 
+"Vertex connectivity", "Edge connectivity", "Average dissimilarity*", 
+"Average path length**"), class = "data.frame"), clust = list(
+    structure(c(1, 24, 2, 26), .Dim = c(2L, 2L), .Dimnames = list(
+        c("name:", "   #:"), c("", "")))), hubs = structure(c("Planococcaceae_unclassified", 
+"WD2101_soil_group_ge", "X67.14_ge"), .Dim = c(3L, 1L), .Dimnames = list(
+    c("", "", ""), "")), central = list(degree1 = structure(list(
+    ` ` = c(49, 49, 49, 49, 49)), row.names = c("Vicinamibacterales_genus", 
+"Candidatus_Udaeobacter", "Sphingomonas", "RB41", "Vicinamibacteraceae_ge"
+), class = "data.frame"), between1 = structure(list(` ` = c(0.00084999999999999995, 
+0, 0, 0, 0)), row.names = c("Bradyrhizobium", "Vicinamibacterales_genus", 
+"Candidatus_Udaeobacter", "Sphingomonas", "RB41"), class = "data.frame"), 
+    close1 = structure(list(` ` = c(1.1538999999999999, 1.1472500000000001, 
+    1.1409199999999999, 1.1102000000000001, 1.09687)), row.names = c("Planococcaceae_unclassified", 
+    "Bacillaceae_unclassified", "X67.14_ge", "Gaiellales_genus", 
+    "Xanthobacteraceae_genus"), class = "data.frame"), eigenv1 = structure(list(
+        ` ` = c(1, 0.99548999999999999, 0.99494000000000005, 
+        0.99351, 0.99228000000000005)), row.names = c("X67.14_ge", 
+    "WD2101_soil_group_ge", "Planococcaceae_unclassified", "Bacteria_unclassified", 
+    "Bacillaceae_unclassified"), class = "data.frame")), group1 = NULL, 
+    group2 = NULL, is_disconnected = FALSE, compSize = structure(c(50, 
+    1), .Dim = 2:1, .Dimnames = list(c("size:", "   #:"), "")), 
+    clusterLCC = FALSE, paramsProperties = list(centrLCC = TRUE, 
+        avDissIgnoreInf = FALSE, sPathNorm = TRUE, sPathAlgo = "dijkstra", 
+        normNatConnect = TRUE, connectivity = TRUE, clustMethod = "cluster_fast_greedy", 
+        clustPar = NULL, clustPar2 = NULL, weightClustCoef = TRUE, 
+        hubPar = "eigenvector", hubQuant = 0.94999999999999996, 
+        lnormFit = FALSE, weightDeg = FALSE, normDeg = FALSE, 
+        normBetw = TRUE, normClose = TRUE, normEigen = TRUE), 
+    twoNets = FALSE, call = NULL), class = "summary.microNetProps")

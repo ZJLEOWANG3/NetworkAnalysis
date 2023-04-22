@@ -1,0 +1,39 @@
+structure(list(glob_probs = structure(list(` ` = c(1, 1, -0.01357, 
+42.69388, 1, 0.25969999999999999, 49, 49, 0.69662000000000002, 
+1)), row.names = c("Number of components", "Clustering coefficient", 
+"Modularity", "Positive edge percentage", "Edge density", "Natural connectivity", 
+"Vertex connectivity", "Edge connectivity", "Average dissimilarity*", 
+"Average path length**"), class = "data.frame"), glob_probs_lcc = structure(list(
+    ` ` = c(1, 1, -0.01357, 42.69388, 1, 0.25969999999999999, 
+    49, 49, 0.69662000000000002, 1)), row.names = c("Relative LCC size", 
+"Clustering coefficient", "Modularity", "Positive edge percentage", 
+"Edge density", "Natural connectivity", "Vertex connectivity", 
+"Edge connectivity", "Average dissimilarity*", "Average path length**"
+), class = "data.frame"), clust = list(structure(c(1, 15, 2, 
+18, 3, 17), .Dim = 2:3, .Dimnames = list(c("name:", "   #:"), 
+    c("", "", "")))), hubs = structure(c("Bacillales_unclassified", 
+"Planococcaceae_unclassified", "X67.14_ge"), .Dim = c(3L, 1L), .Dimnames = list(
+    c("", "", ""), "")), central = list(degree1 = structure(list(
+    ` ` = c(15.871460000000001, 15.86134, 15.846349999999999, 
+    15.80185, 15.78403)), row.names = c("Planococcaceae_unclassified", 
+"X67.14_ge", "Bacillales_unclassified", "Bacillaceae_unclassified", 
+"Gaiellales_genus"), class = "data.frame"), between1 = structure(list(
+    ` ` = c(0, 0, 0, 0, 0)), row.names = c("Vicinamibacterales_genus", 
+"Candidatus_Udaeobacter", "Sphingomonas", "RB41", "Vicinamibacteraceae_ge"
+), class = "data.frame"), close1 = structure(list(` ` = c(1.2747299999999999, 
+1.2465900000000001, 1.22054, 1.2143900000000001, 1.18919)), row.names = c("Bacillales_unclassified", 
+"Bacillaceae_unclassified", "Planococcaceae_unclassified", "X67.14_ge", 
+"Gaiellales_genus"), class = "data.frame"), eigenv1 = structure(list(
+    ` ` = c(1, 0.99904000000000004, 0.99904000000000004, 0.99614000000000003, 
+    0.99378)), row.names = c("Planococcaceae_unclassified", "Bacillales_unclassified", 
+"X67.14_ge", "Bacillaceae_unclassified", "Gaiellales_genus"), class = "data.frame")), 
+    group1 = NULL, group2 = NULL, is_disconnected = FALSE, compSize = structure(c(50, 
+    1), .Dim = 2:1, .Dimnames = list(c("size:", "   #:"), "")), 
+    clusterLCC = FALSE, paramsProperties = list(centrLCC = TRUE, 
+        avDissIgnoreInf = FALSE, sPathNorm = TRUE, sPathAlgo = "dijkstra", 
+        normNatConnect = TRUE, connectivity = TRUE, clustMethod = "cluster_fast_greedy", 
+        clustPar = NULL, clustPar2 = NULL, weightClustCoef = TRUE, 
+        hubPar = "eigenvector", hubQuant = 0.94999999999999996, 
+        lnormFit = FALSE, weightDeg = TRUE, normDeg = FALSE, 
+        normBetw = TRUE, normClose = TRUE, normEigen = TRUE), 
+    twoNets = FALSE, call = NULL), class = "summary.microNetProps")

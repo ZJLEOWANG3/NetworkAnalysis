@@ -17,7 +17,7 @@ library(NetCoMi)
 
 ```{r setup-chunk, include=FALSE}
 knitr::opts_chunk$set(dev = "png",
-                      dpi = 600,
+                      dpi = 1080,
                       echo = FALSE,
                       cache = TRUE)
 ```
@@ -49,9 +49,9 @@ get.network <- function(dat,pathout,method){
   }
 net_spring <- netConstruct(dat,
                            filtTax = "highestFreq",
-                           filtTaxPar = list(highestFreq = 80),
+                           filtTaxPar = list(highestFreq = 50),
                            filtSamp = "totalReads",
-                           filtSampPar = list(totalReads = 0.001),# my data is abundance
+                           filtSampPar = list(totalReads = 0.01),# my data is abundance
                            measure = measure,#associations between taxa 
                            measurePar = measurePar,
                            normMethod = "none", 
@@ -100,7 +100,7 @@ outputfile <- paste(pathout,'/network.summary.',method,'.txt',sep="")
 dput(summary(props_spring, numbNodes = 5L),file=outputfile,control="all")
 
 # viz the network
-png(paste(pathout,'/network_',method,'.png',sep=""),width=700,height=600)
+png(paste(pathout,'/network_',method,'.png',sep=""),width=1920,height=1920)
 
 p <- plot(props_spring, 
           nodeColor = "cluster", 
@@ -115,20 +115,73 @@ legend(0.5, 1.1, cex = 0.8, title = "estimated association:",
        bty = "n", horiz = TRUE)
 dev.off()
 }
-main <- function(pathin,pathout,method){
-  if (!dir.exists(pathout)){
-  dir.create(pathout,recursive = TRUE)
-}
-dat <- get.dat(pathin)
-get.network(dat,pathout,method)}
+main <- function(pathin,pathout,method,split=FALSE){
+  
+  dat <- get.dat(pathin)
+  if (class(split)=="list"){
+    for (paths in pathout){
+    if (!dir.exists(paths)){
+  dir.create(paths,recursive = TRUE)}} # create multiple pathout
+    # split the data given split as a vector
+    for (i in seq_along(split)){
+      get.network(dat[split[i][[1]],],pathout[i],method)
+    }
+  }
+  else if (split==FALSE){
+    if (!dir.exists(pathout)){
+  dir.create(pathout,recursive = TRUE)} # create one pathout
+  get.network(dat,pathout,method)}
+  
+  }
 ```
 
 ```{r}
+# # Peisheng Data
+# pathin = "../data/Peisheng/abundance/genus.tsv"
+# pathout = "../output/Peisheng/Soil01"
+# main(pathin,pathout,"spearman")
 
-# Peisheng Data
-pathin = "../data/Peisheng/abundance/genus.tsv"
-pathout = "../output/Peisheng/Soil01"
-main(pathin,pathout,"spearman")
+# Zhou SOil Old Data
+# pathin = "../../EasyMicrobiome/data/ZhouSoil16S/Old/abundance/genus.tsv"
+# pathout = "../output/ZhouSoil/Old"
+# main(pathin,pathout,"spearman")
+# main(pathin,pathout,"sparcc")
+# main(pathin,pathout,"pearson")
+
+# Zhou SOil Old Data by separating sorted and unsorted
+# pathin = "../../EasyMicrobiome/data/ZhouSoil16S/Old/abundance/genus.tsv"
+# pathout = list(p1="../output/ZhouSoil/Old/unsorted",p2="../output/ZhouSoil/Old/sorted")
+# main(pathin,pathout,"spearman",seq(1,23,2))
+# main(pathin,pathout,"sparcc",seq(1,23,2))
+# main(pathin,pathout,"pearson",seq(1,23,2))
+
+# Zhou SOil New Data
+# pathin = "../../EasyMicrobiome/data/ZhouSoil16S/New/abundance/genus.tsv"
+# pathout = "../output/ZhouSoil/New"
+# main(pathin,pathout,"spearman")
+# main(pathin,pathout,"sparcc")
+# main(pathin,pathout,"pearson")
+
+# Zhou Soil New Data by separating sorted and unsorted
+# pathin = "../../EasyMicrobiome/data/ZhouSoil16S/New/abundance/genus.tsv"
+# pathout = list(p1="../output/ZhouSoil/New/unsorted",p2="../output/ZhouSoil/New/sorted")
+# main(pathin,pathout,"spearman",seq(1,48,2))
+# main(pathin,pathout,"sparcc",seq(1,48,2))
+# main(pathin,pathout,"pearson",seq(1,48,2))
+
+# CROPPS SUmmer 2022 Winter Wheat
+pathin = "../../EasyMicrobiome/data/CROPPS2022Summer16S/abundance/genus.tsv"
+pathout = c("../output/CROPPS/2022SummerWheat/Normal",
+               "../output/CROPPS/2022SummerWheat/Wet",
+               "../output/CROPPS/2022SummerWheat/Tower")
+split = list(
+  c(seq(1,4),seq(13,16),seq(25,28),seq(37,40)),
+  c(seq(1,4),seq(13,16),seq(25,28),seq(37,40))[1:15]+4,
+  c(seq(1,4),seq(13,16),seq(25,28))+8
+)
+main(pathin,pathout,"spearman",split)
+main(pathin,pathout,"sparcc",split)
+main(pathin,pathout,"pearson",split)
 ```
 
 ```{r}
